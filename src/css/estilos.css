@@ -1,3 +1,4 @@
+/* PUEDN MODIFICAR Y AGREGAR AL ROOT */
 :root {
     --colorUno: #14bfb1;
     --colorDos: #00A8A8;
@@ -9,7 +10,7 @@
     --fuenteSecundaria: "BBH Sans Hegarty", sans-serif;
 }
 
-
+/* NO MODIFICAR */
 /* Styles for containers */
 .navbar__logo{
     border: 1px solid #000;
@@ -85,6 +86,7 @@ h1{
 
 /*media querry*/
 
+/* TELEFONOS */
 @media (width<=768px){
     .navbar__container{
         width: 100%;
