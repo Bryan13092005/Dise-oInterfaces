@@ -1,12 +1,13 @@
 /* PUEDN MODIFICAR Y AGREGAR AL ROOT */
 :root {
     --colorUno: #14bfb1;
-    --colorDos: #00A8A8;
+    --colorDos: #15d5d5b6;
     --colorTres: #2FE5E4;
     --colorCuatro: #293A4E;
     --colorCinco: #000000;
     --colorSeis: #acf152;
-    --fuentePrincipal: "Oswald", sans-serif;
+    --colorSiete: #ffffff;;
+    --fuentePrincipal: "Shrikhand", sans-serif;
     --fuenteSecundaria: "BBH Sans Hegarty", sans-serif;
 }
 
@@ -15,7 +16,8 @@
 .navbar__logo{
     border: 1px solid #000;
     max-width: 150px;
-    margin: 10px
+    text-align: left;
+    margin: 50px
 }
 .container {
     border: 2px solid #000; /*bd para completar los bordes*/
@@ -25,14 +27,18 @@
     
 }
 
-.navbar__container{
-    background-image: url(/src/imagenes/header.png);
-    background-position: center 30%;
+.navbar__container {
+    background-image: url(/src/imagenes/header.jpeg); 
+    background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid #2433ff;
+    background-size: cover;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 40px 30px;
+    position: relative;
 }
+
 
 .ul1{
     list-style: none; /*quita la numeracion de la lista*/
@@ -52,7 +58,7 @@
     flex-wrap: wrap; /*al ir aumentando cajas bajar a otra fila*/
 }
 ul li a{
-    border: 2px solid #f430ee;
+    border: 2px solid #cf84b6;
     color: var(--colorCuatro);
     text-decoration: none; /*quita subrayado*/
     cursor: pointer;
@@ -153,4 +159,81 @@ h1{
 /* ESCRITORIO */
 @media (width>=1025){
 
+    .navbar__container{
+        width: 100%;
+        max-width: 1400px;   /*Ancho maximo */
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 30px;
+        background-size: cover;
+        max-height: 150px;     /* opcional*/
+    }
+
+    .navbar__logo{
+        max-width: 150px;
+        margin: 30px
+    }
+
+    h1 {
+    color: var(--colorSiete); /* blanco */
+    font-family: var(--fuentePrincipal);
+    font-size: 150px !important;
+    border: none !important;
+    margin: 0;
+    letter-spacing: 2px;
 }
+
+    .ul1{
+        list-style: none; 
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        padding: 0;            
+        margin: 0;             
+        gap: 20px;  
+    }
+
+    .ul2{
+        list-style: none; 
+        display: flex; 
+        justify-content: flex-end ; 
+        align-items: center;
+        padding: 0;            
+        margin: 0;             
+        gap: 20px;  
+    }
+
+    ul li a{
+        color: var(--colorCuatro);
+        text-decoration: none;
+        font-family: var(--fuenteSecundaria);
+        font-size: 16px;
+        font-weight: 500;
+        padding: 5px 10px;
+        transition: color 0.2s ease;
+    }
+
+    ul li a:hover{
+        color: var(--colorDos);
+        text-decoration: underline;
+    }
+
+    ul li:last-child a{
+        color: var(--colorTres);
+        font-weight: 700; 
+    }
+
+    .navbar__botones{
+        background-color: rgba(220,238,170);
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        padding: 10px;
+        border-top: 2px solid var(--colorCuatro);
+        
+    }
+
+}
+
