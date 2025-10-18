@@ -28,7 +28,7 @@
 }
 
 .navbar__container {
-    background-image: url(src/imagenes/header2.png); 
+    background-image: url(/src/imagenes/header.jpeg); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
