@@ -1,13 +1,13 @@
 :root {
-    --colorUno: #14bfb1;
-    --colorDos: #15d5d5b6;
-    --colorTres: #2FE5E4;
-    --colorCuatro: #293A4E;
-    --colorCinco: #000000;
-    --colorSeis: #acf152;
-    --colorSiete: #ffffff;;
-    --fuentePrincipal: "Shrikhand", sans-serif;
-    --fuenteSecundaria: "BBH Sans Hegarty", sans-serif;
+    --color-principal: #14bfb1;
+    --color-secundario: #2fe5e4;
+    --color-texto: #293a4e;
+    --color-blanco: #ffffff;
+    --color-fondo: #f5f9f9;
+    --color-tarjeta1: #fff2f9;
+    --color-tarjeta2: #f0f7ff;
+    --fuente-titulos: "Shrikhand", sans-serif;
+    --fuente-texto: "Roboto", sans-serif;
 }
 
 body {
@@ -33,33 +33,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 30px;
-    position: relative;
+    padding: 25px;
+    margin-bottom: 30px;
 }
 
-
-.ul1{
-    list-style: none; /*quita la numeracion de la lista*/
-    border: 2px solid #e6e62c;
-    padding: 1; /*espaciado interno*/
-    display: flex; /*mover las cajas*/
-    justify-content: center; /*alinear*/
-    flex-wrap: wrap; /*al ir aumentando cajas bajar a otra fila*/
-
-}
-.ul2{
-    list-style: none; /*quita la numeracion de la lista*/
-    border: 2px solid #e6e62c;
-    padding: 1; /*espaciado interno*/
-    display: flex; /*mover las cajas*/
-    justify-content: center; /*alinear*/
-    flex-wrap: wrap; /*al ir aumentando cajas bajar a otra fila*/
-}
-ul li a{
-    border: 2px solid #cf84b6;
-    color: var(--colorCuatro);
-    text-decoration: none; /*quita subrayado*/
-    cursor: pointer;
+.navbar__logo {
+    max-width: 120px;
+    padding: 10px;
+    background: var(--color-blanco);
+    border-radius: 8px;
 }
 
 .ul1, .ul2 {
@@ -109,8 +91,8 @@ h1 {
     }
 
     .navbar__container{
-        width: 100%;
-        max-width: 400px;   /* máximo ancho en móviles */     /* altura automática según contenido */
+        width: 80%;
+        max-width: 400px;
         justify-content: center;
         max-height: 100px;
     }
@@ -168,11 +150,110 @@ h1 {
         color: var(--colorCuatro) !important;
         font-weight: 1 !important;
     }
-}
 
-/* TABLETS */
-@media(width<=1024) and (width>768) {
+    .about__title{
+        margin: 5;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
     
+    .hero__text{
+        text-align: center;
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    .hero__services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        background-color: var(--color-fondo);
+        border-radius: 15px;
+    }
+
+    .service {
+        background: var(--color-blanco);
+        border-radius: 15px;
+        overflow: hidden;
+        width: 200px;
+        height: auto;
+    }
+
+    .service img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-bottom: 3px solid var(--color-principal);
+    }
+
+    .alimentacion__title{
+        text-align: center;
+        font-size: 1rem;
+        padding-left: 1rem;
+        margin: 5;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .alimentacion__img{
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+
+    .alimentacion__info {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        background: var(--color-blanco);
+        padding: 20px;
+        border-radius: 15px;
+        margin: 20px 0;
+    }
+
+    .alimentacion__img img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 12px;
+    }
+
+    .bancoAlimentos__container,
+    .caritasInternacional__container {
+        flex: 1;
+        padding: 25px;
+        border-radius: 12px;
+    }
+
+    .bancoAlimentos__container {
+        background: var(--color-tarjeta1);
+    }
+
+    .caritasInternacional__container {
+        background: var(--color-tarjeta2);
+    }
+
+    .alimentacion__subtitle {
+        color: var(--color-principal);
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .alimentacion__text,
+    .alimentacion__text2 {
+        color: var(--color-texto);
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .alimentacion__ofrecen,
+    .alimentacion__vision {
+        color: var(--color-principal);
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
 }
 
 /* ESCRITORIO */
@@ -245,9 +326,55 @@ h1 {
         justify-content: center;
         gap: 25px;
         padding: 10px;
-        border-top: 2px solid var(--colorCuatro);
-        
+        border-top: 2px solid var(--color-texto);
+        border-radius: 10px;
     }
 
-}
+    .hero__services{
+        background: var(--color-fondo);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem;
+        border-radius: 15px;
+    }
 
+    .service{
+        min-width: 250px;
+        flex-shrink: 0;
+        background: var(--color-blanco);
+        border-radius: 15px;
+    }
+
+    .service img{
+        width: 100%;
+        height: 180px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .alimentacion__info {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start;
+        justify-content: space-between;
+        background: var(--color-blanco);
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+    .bancoAlimentos__container{
+        background: var(--color-tarjeta1);
+        padding: 2rem;
+        flex: 1;
+        border-radius: 25px;
+    }
+
+    .caritasInternacional__container{
+        background: var(--color-tarjeta2);
+        padding: 2rem;
+        flex: 1;
+        border-radius: 25px;
+    }
+}
