@@ -1,109 +1,107 @@
-/* PUEDN MODIFICAR Y AGREGAR AL ROOT */
 :root {
-    --colorUno: #14bfb1;
-    --colorDos: #15d5d5b6;
-    --colorTres: #2FE5E4;
-    --colorCuatro: #293A4E;
-    --colorCinco: #000000;
-    --colorSeis: #acf152;
-    --colorSiete: #ffffff;;
-    --fuentePrincipal: "Shrikhand", sans-serif;
-    --fuenteSecundaria: "BBH Sans Hegarty", sans-serif;
+    --color-principal: #14bfb1;
+    --color-secundario: #2fe5e4;
+    --color-texto: #293a4e;
+    --color-blanco: #ffffff;
+    --color-fondo: #f5f9f9;
+    --color-tarjeta1: #fff2f9;
+    --color-tarjeta2: #f0f7ff;
+    --fuente-titulos: "Shrikhand", sans-serif;
+    --fuente-texto: "Roboto", sans-serif;
 }
 
-/* NO MODIFICAR */
-/* Styles for containers */
-.navbar__logo{
-    border: 1px solid #000;
-    max-width: 150px;
-    text-align: left;
-    margin: 50px
+body {
+    margin: 0;
+    font-family: var(--fuente-texto);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
 }
+
 .container {
-    border: 2px solid #000; /*bd para completar los bordes*/
-    max-width: 100%; /*ancho max*/
-    width: 98%;/*ancho que va a usar*/
-    margin: 0 auto;/*centrar la caja*/
-    
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--color-blanco);
+    border-radius: 15px;
 }
 
 .navbar__container {
-    background-image: url(/src/imagenes/header.jpeg); 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 30px;
-    position: relative;
+    padding: 25px;
+    margin-bottom: 30px;
 }
 
-
-.ul1{
-    list-style: none; /*quita la numeracion de la lista*/
-    border: 2px solid #e6e62c;
-    padding: 1; /*espaciado interno*/
-    display: flex; /*mover las cajas*/
-    justify-content: center; /*alinear*/
-    flex-wrap: wrap; /*al ir aumentando cajas bajar a otra fila*/
-
-}
-.ul2{
-    list-style: none; /*quita la numeracion de la lista*/
-    border: 2px solid #e6e62c;
-    padding: 1; /*espaciado interno*/
-    display: flex; /*mover las cajas*/
-    justify-content: center; /*alinear*/
-    flex-wrap: wrap; /*al ir aumentando cajas bajar a otra fila*/
-}
-ul li a{
-    border: 2px solid #cf84b6;
-    color: var(--colorCuatro);
-    text-decoration: none; /*quita subrayado*/
-    cursor: pointer;
-}
-/*pseudo clase*/
-/*last child ultimo elemento*/
-ul li:last-child a{
-    color: var(--colorTres);
-    font-weight: 700; /*negrita*/
+.navbar__logo {
+    max-width: 120px;
+    padding: 10px;
+    background: var(--color-blanco);
+    border-radius: 8px;
 }
 
-ul li a:hover{
-    text-decoration: underline; /*cambiar color*/
-    color: var(--colorDos);
-}
-
-h1{
-    color: var(--colorUno);
-    font-family: var(--fuentePrincipal);
-    font-size: 50px !important;
-    border: 100px var(--colorCuatro) !important;
-}
-
-.navbar__botones{
-    background-color:rgb(220, 238, 170);
-    text-align: left;
+.ul1, .ul2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
+    gap: 15px;
     align-items: center;
 }
 
+.ul1 a, .ul2 a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
 
-/*media querry*/
+#a2 {
+    background-color: var(--color-blanco);
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+h1 {
+    color: var(--color-blanco);
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: 0;
+    text-align: center;
+}
+
+.navbar__botones {
+    background-color: var(--color-fondo);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 
 /* TELEFONOS */
 @media (width<=768px){
-    .navbar__container{
-        width: 100%;
-        max-width: 400px;   /* máximo ancho en móviles */     /* altura automática según contenido */
-        justify-content: center;
-        max-height: 100px;     /* opcional, no crece más que esto */
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 25px;
     }
+
+    .navbar__container{
+        width: 80%;
+        max-width: 400px;
+        justify-content: center;
+        max-height: 100px;
+    }
+    
     .navbar__logo{
         max-width: 75px;
         margin: 8px
     }
+    
     .h1{
         color: var(--colorUno);
         font-family: var(--fuentePrincipal);
@@ -111,35 +109,38 @@ h1{
         border: 1px var(--colorCuatro) !important;
         text-align: center;
     }
+    
     .ul1{
-        list-style: none; /*quita la numeracion de la lista*/
-        display: flex; /*mover las cajas*/
-        justify-content:center; /*alinear*/
+        list-style: none;
+        display: flex;
+        justify-content:center;
         flex-direction: column;
-        padding: 0;            /* quitar padding */
-        margin: 0;             /* quitar margin */
+        padding: 0;
+        margin: 0;
         gap: 0;  
     }
 
     .a1{
         color: var(--colorDos);
-        text-decoration: none; /*quita subrayado*/
+        text-decoration: none;
         cursor: pointer;
         font-size: 15px;
         display: flex;
         text-align: center;
     }
+    
     .navbar__botones{
         width: 100vw !important;
         margin: 0;
     }
+    
     .ul2{
-        list-style: none; /*quita la numeracion de la lista*/
-        display: flex; /*mover las cajas*/
-        justify-content:space-between; /*alinear*/
+        list-style: none;
+        display: flex;
+        justify-content:space-between;
         flex-direction: row;
-        padding-left: 0;            /* quitar padding */
-        margin: 0;             /* quitar margin */
+        padding-left: 0;
+        margin: 0;
         gap: 20px; 
         align-items: center;
         width: 98vw !important;
@@ -149,24 +150,123 @@ h1{
         color: var(--colorCuatro) !important;
         font-weight: 1 !important;
     }
-}
 
-/* TABLETS */
-@media(width<=1024) and (width>768) {
+    .about__title{
+        margin: 5;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
     
+    .hero__text{
+        text-align: center;
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    .hero__services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        background-color: var(--color-fondo);
+        border-radius: 15px;
+    }
+
+    .service {
+        background: var(--color-blanco);
+        border-radius: 15px;
+        overflow: hidden;
+        width: 200px;
+        height: auto;
+    }
+
+    .service img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-bottom: 3px solid var(--color-principal);
+    }
+
+    .alimentacion__title{
+        text-align: center;
+        font-size: 1rem;
+        padding-left: 1rem;
+        margin: 5;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .alimentacion__img{
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+
+    .alimentacion__info {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        background: var(--color-blanco);
+        padding: 20px;
+        border-radius: 15px;
+        margin: 20px 0;
+    }
+
+    .alimentacion__img img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 12px;
+    }
+
+    .bancoAlimentos__container,
+    .caritasInternacional__container {
+        flex: 1;
+        padding: 25px;
+        border-radius: 12px;
+    }
+
+    .bancoAlimentos__container {
+        background: var(--color-tarjeta1);
+    }
+
+    .caritasInternacional__container {
+        background: var(--color-tarjeta2);
+    }
+
+    .alimentacion__subtitle {
+        color: var(--color-principal);
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .alimentacion__text,
+    .alimentacion__text2 {
+        color: var(--color-texto);
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .alimentacion__ofrecen,
+    .alimentacion__vision {
+        color: var(--color-principal);
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
 }
 
 /* ESCRITORIO */
-@media (width>=1025){
+@media (min-width: 1025px){
 
     .navbar__container{
         width: 100%;
-        max-width: 1400px;   /*Ancho maximo */
+        max-width: 1400px;
         justify-content: space-between;
         align-items: center;
         padding: 40px 30px;
         background-size: cover;
-        max-height: 150px;     /* opcional*/
+        max-height: 150px;
     }
 
     .navbar__logo{
@@ -175,13 +275,14 @@ h1{
     }
 
     h1 {
-    color: var(--colorSiete); /* blanco */
-    font-family: var(--fuentePrincipal);
-    font-size: 150px !important;
-    border: none !important;
-    margin: 0;
-    letter-spacing: 2px;
-}
+        color: var(--color-blanco);
+        font-family: var(--fuente-titulos);
+        font-size: 60px !important;
+        border: none !important;
+        margin: 0 auto;
+        letter-spacing: 2px;
+        text-align: center;
+    }
 
     .ul1{
         list-style: none; 
@@ -196,7 +297,7 @@ h1{
     .ul2{
         list-style: none; 
         display: flex; 
-        justify-content: flex-end ; 
+        justify-content: flex-end; 
         align-items: center;
         padding: 0;            
         margin: 0;             
@@ -204,36 +305,76 @@ h1{
     }
 
     ul li a{
-        color: var(--colorCuatro);
+        color: var(--color-texto);
         text-decoration: none;
-        font-family: var(--fuenteSecundaria);
+        font-family: var(--fuente-texto);
         font-size: 16px;
         font-weight: 500;
         padding: 5px 10px;
-        transition: color 0.2s ease;
-    }
-
-    ul li a:hover{
-        color: var(--colorDos);
-        text-decoration: underline;
     }
 
     ul li:last-child a{
-        color: var(--colorTres);
+        color: var(--color-principal);
         font-weight: 700; 
     }
 
     .navbar__botones{
-        background-color: rgba(220,238,170);
+        background-color: rgba(220,238,170,0.6);
         text-align: left;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 25px;
         padding: 10px;
-        border-top: 2px solid var(--colorCuatro);
-        
+        border-top: 2px solid var(--color-texto);
+        border-radius: 10px;
     }
 
-}
+    .hero__services{
+        background: var(--color-fondo);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem;
+        border-radius: 15px;
+    }
 
+    .service{
+        min-width: 250px;
+        flex-shrink: 0;
+        background: var(--color-blanco);
+        border-radius: 15px;
+    }
+
+    .service img{
+        width: 100%;
+        height: 180px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .alimentacion__info {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start;
+        justify-content: space-between;
+        background: var(--color-blanco);
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+    .bancoAlimentos__container{
+        background: var(--color-tarjeta1);
+        padding: 2rem;
+        flex: 1;
+        border-radius: 25px;
+    }
+
+    .caritasInternacional__container{
+        background: var(--color-tarjeta2);
+        padding: 2rem;
+        flex: 1;
+        border-radius: 25px;
+    }
+}
