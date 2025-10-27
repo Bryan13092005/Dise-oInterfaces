@@ -191,6 +191,9 @@ h2{
         color: var(--colorUno);
         text-align: center;
     }
+    h2{
+    text-align: center;
+    }
 
     .ul1, .ul2 {
         flex-direction: column;
