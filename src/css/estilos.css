@@ -135,7 +135,7 @@ h1 {
     flex-wrap: wrap;
     gap: 30px;
     align-items: flex-start;
-    background: var(--color-blanco);
+    background-color: #FFE4C2;
     padding: 20px;
     border-radius: 15px;
     margin: 20px 0;
