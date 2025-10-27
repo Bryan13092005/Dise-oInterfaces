@@ -1,15 +1,4 @@
-:root {
-    --color-principal: #14bfb1;
-    --color-secundario: #2fe5e4;
-    --color-texto: #293a4e;
-    --color-blanco: #ffffff;
-    --color-fondo: #f5f9f9;
-    --color-tarjeta1: #fff2f9;
-    --color-tarjeta2: #f0f7ff;
-    --fuente-titulos: "Shrikhand", sans-serif;
-    --fuente-texto: "Roboto", sans-serif;
-}
-
+/* ===== ESTILOS BASE ===== */
 body {
     margin: 0;
     font-family: var(--fuente-texto);
@@ -27,6 +16,15 @@ body {
     border-radius: 15px;
 }
 
+h1 {
+    color: var(--color-blanco);
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: 0;
+    text-align: center;
+}
+
+/* ===== NAVBAR ===== */
 .navbar__container {
     background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
     border-radius: 15px;
@@ -35,6 +33,7 @@ body {
     align-items: center;
     padding: 25px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .navbar__logo {
@@ -59,6 +58,11 @@ body {
     padding: 8px 16px;
     border-radius: 25px;
     border: 1px solid rgba(255,255,255,0.2);
+    transition: background 0.3s, color 0.3s;
+}
+
+.ul1 a:hover, .ul2 a:hover {
+    background-color: rgba(255,255,255,0.2);
 }
 
 #a2 {
@@ -67,314 +71,202 @@ body {
     font-weight: bold;
 }
 
-h1 {
-    color: var(--color-blanco);
-    font-family: var(--fuente-titulos);
-    font-size: clamp(2rem, 5vw, 4rem);
-    margin: 0;
-    text-align: center;
-}
-
 .navbar__botones {
     background-color: var(--color-fondo);
     padding: 10px 20px;
     border-radius: 10px;
     margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* TELEFONOS */
-@media (width<=768px){
-    img {
-        width: 100px;
-        height: 100px;
-        border-radius: 25px;
-    }
+/* ===== SECCIONES ===== */
+.hero__services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--color-fondo);
+    border-radius: 15px;
+}
 
-    .navbar__container{
-        width: 80%;
-        max-width: 400px;
-        justify-content: center;
-        max-height: 100px;
-    }
-    
-    .navbar__logo{
-        max-width: 75px;
-        margin: 8px
-    }
-    
-    .h1{
-        color: var(--colorUno);
-        font-family: var(--fuentePrincipal);
-        font-size: 30px !important;
-        border: 1px var(--colorCuatro) !important;
-        text-align: center;
-    }
-    
-    .ul1{
-        list-style: none;
-        display: flex;
-        justify-content:center;
+.service {
+    background: var(--color-blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--color-principal);
+}
+
+/* ===== ALIMENTACIÓN ===== */
+.alimentacion__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    background: var(--color-blanco);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.alimentacion__img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+}
+
+.bancoAlimentos__container,
+.caritasInternacional__container {
+    flex: 1;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.bancoAlimentos__container {
+    background: var(--color-tarjeta1);
+}
+
+.caritasInternacional__container {
+    background: var(--color-tarjeta2);
+}
+
+.alimentacion__subtitle {
+    color: var(--color-principal);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.alimentacion__text,
+.alimentacion__text2 {
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ===== MEDIA QUERY: MÓVILES ===== */
+@media (max-width: 768px) {
+    .navbar__container {
         flex-direction: column;
-        padding: 0;
-        margin: 0;
-        gap: 0;  
-    }
-
-    .a1{
-        color: var(--colorDos);
-        text-decoration: none;
-        cursor: pointer;
-        font-size: 15px;
-        display: flex;
-        text-align: center;
-    }
-    
-    .navbar__botones{
-        width: 100vw !important;
-        margin: 0;
-    }
-    
-    .ul2{
-        list-style: none;
-        display: flex;
-        justify-content:space-between;
-        flex-direction: row;
-        padding-left: 0;
-        margin: 0;
-        gap: 20px; 
         align-items: center;
-        width: 98vw !important;
-    }
-
-    #a2{
-        color: var(--colorCuatro) !important;
-        font-weight: 1 !important;
-    }
-
-    .about__title{
-        margin: 5;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
-    }
-    
-    .hero__text{
+        padding: 15px;
         text-align: center;
-        font-size: 1rem;
-        padding-left: 1rem;
     }
 
-    .hero__services {
-        display: flex;
+    .navbar__logo {
+        max-width: 80px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        color: var(--colorUno);
+        text-align: center;
+    }
+
+    .ul1, .ul2 {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .ul1 a, .ul2 a {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    #a2 {
+        color: var(--colorCuatro);
+        font-weight: normal;
+    }
+
+    .navbar__botones {
+        width: 100%;
+        margin-top: 10px;
         flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        padding: 20px;
-        background-color: var(--color-fondo);
-        border-radius: 15px;
     }
 
     .service {
-        background: var(--color-blanco);
-        border-radius: 15px;
-        overflow: hidden;
-        width: 200px;
-        height: auto;
+        width: 180px;
     }
 
     .service img {
-        width: 200px;
-        height: 150px;
-        object-fit: cover;
-        border-bottom: 3px solid var(--color-principal);
-    }
-
-    .alimentacion__title{
-        text-align: center;
-        font-size: 1rem;
-        padding-left: 1rem;
-        margin: 5;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .alimentacion__img{
-        width: 100%;
-        height: 100%;
-        border-radius: 25px;
+        height: 140px;
     }
 
     .alimentacion__info {
-        display: flex;
-        gap: 30px;
-        align-items: flex-start;
-        background: var(--color-blanco);
-        padding: 20px;
-        border-radius: 15px;
-        margin: 20px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .alimentacion__img img {
-        width: 100%;
-        max-width: 300px;
-        border-radius: 12px;
+        max-width: 90%;
+        margin-bottom: 15px;
     }
 
     .bancoAlimentos__container,
     .caritasInternacional__container {
-        flex: 1;
-        padding: 25px;
-        border-radius: 12px;
-    }
-
-    .bancoAlimentos__container {
-        background: var(--color-tarjeta1);
-    }
-
-    .caritasInternacional__container {
-        background: var(--color-tarjeta2);
-    }
-
-    .alimentacion__subtitle {
-        color: var(--color-principal);
-        font-size: 1.5rem;
+        width: 100%;
         margin-bottom: 15px;
-    }
-
-    .alimentacion__text,
-    .alimentacion__text2 {
-        color: var(--color-texto);
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
-
-    .alimentacion__ofrecen,
-    .alimentacion__vision {
-        color: var(--color-principal);
-        font-size: 1.2rem;
-        margin-top: 20px;
     }
 }
 
-/* ESCRITORIO */
-@media (min-width: 1025px){
-
-    .navbar__container{
-        width: 100%;
+/* ===== MEDIA QUERY: ESCRITORIO ===== */
+@media (min-width: 1025px) {
+    .navbar__container {
         max-width: 1400px;
         justify-content: space-between;
         align-items: center;
         padding: 40px 30px;
         background-size: cover;
-        max-height: 150px;
     }
 
-    .navbar__logo{
+    .navbar__logo {
         max-width: 150px;
-        margin: 30px
     }
 
     h1 {
-        color: var(--color-blanco);
-        font-family: var(--fuente-titulos);
-        font-size: 60px !important;
-        border: none !important;
-        margin: 0 auto;
+        font-size: 60px;
         letter-spacing: 2px;
-        text-align: center;
     }
 
-    .ul1{
-        list-style: none; 
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        padding: 0;            
-        margin: 0;             
-        gap: 20px;  
+    .ul1, .ul2 {
+        flex-direction: row;
+        gap: 20px;
     }
 
-    .ul2{
-        list-style: none; 
-        display: flex; 
-        justify-content: flex-end; 
-        align-items: center;
-        padding: 0;            
-        margin: 0;             
-        gap: 20px;  
-    }
-
-    ul li a{
-        color: var(--color-texto);
-        text-decoration: none;
-        font-family: var(--fuente-texto);
-        font-size: 16px;
-        font-weight: 500;
-        padding: 5px 10px;
-    }
-
-    ul li:last-child a{
-        color: var(--color-principal);
-        font-weight: 700; 
-    }
-
-    .navbar__botones{
+    .navbar__botones {
         background-color: rgba(220,238,170,0.6);
-        text-align: left;
-        display: flex;
-        align-items: center;
         justify-content: center;
         gap: 25px;
-        padding: 10px;
         border-top: 2px solid var(--color-texto);
-        border-radius: 10px;
-    }
-
-    .hero__services{
-        background: var(--color-fondo);
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        padding: 2rem;
-        border-radius: 15px;
-    }
-
-    .service{
-        min-width: 250px;
-        flex-shrink: 0;
-        background: var(--color-blanco);
-        border-radius: 15px;
-    }
-
-    .service img{
-        width: 100%;
-        height: 180px;
-        border-radius: 15px 15px 0 0;
     }
 
     .alimentacion__info {
-        display: flex;
         flex-direction: row;
-        gap: 30px;
-        align-items: flex-start;
         justify-content: space-between;
-        background: var(--color-blanco);
         padding: 30px;
-        border-radius: 20px;
     }
 
-    .bancoAlimentos__container{
-        background: var(--color-tarjeta1);
+    .bancoAlimentos__container,
+    .caritasInternacional__container {
         padding: 2rem;
-        flex: 1;
-        border-radius: 25px;
-    }
-
-    .caritasInternacional__container{
-        background: var(--color-tarjeta2);
-        padding: 2rem;
-        flex: 1;
         border-radius: 25px;
     }
 }
