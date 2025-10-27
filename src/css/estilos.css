@@ -1,3 +1,14 @@
+:root {
+    --color-principal: #14bfb1;
+    --color-secundario: #2fe5e4;
+    --color-texto: #293a4e;
+    --color-blanco: #ffffff;
+    --color-fondo: #f5f9f9;
+    --color-tarjeta1: #fff2f9;
+    --color-tarjeta2: #f0f7ff;
+    --fuente-titulos: "Shrikhand", sans-serif;
+    --fuente-texto: "Roboto", sans-serif;
+}
 /* ===== ESTILOS BASE ===== */
 body {
     margin: 0;
