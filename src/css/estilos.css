@@ -285,6 +285,7 @@ h1 {
         flex-direction: row;
         justify-content: space-between;
         padding: 30px;
+        background-color: #FFE4C2;
     }
 
     .bancoAlimentos__container,
