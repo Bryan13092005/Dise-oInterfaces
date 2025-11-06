@@ -122,7 +122,10 @@ ul li:last-child a {
     margin-top: 10px;
     text-align: center;
 }
-
+ol {
+    list-style-type: decimal !important;
+    margin-left: 20px;
+  }
 
 /* TITULOS */
 h1, .h1 {
@@ -279,6 +282,7 @@ h1, .h1 {
     color: var(--color-texto);
     font-size: 1.5rem;
     margin-bottom: 15px;
+    margin-top: 0;
     text-align: center;
 }
 
@@ -305,6 +309,35 @@ h1, .h1 {
 }
 
 
+
+/*FUNDACIONES*/
+.Todas_Fundaciones{
+    background: var(--color-tarjetaAlimentos1);
+    align-content: space-around;
+}
+
+.FUNDACIONES{
+    display: flex;
+    gap: 1rem;
+}
+
+.Todas_ONG{
+    margin: 0 1rem;
+    background: var(--color-tarjeta2);
+    text-align: center;
+}
+.contactos{
+    background: var(--color-tarjetaSP1);
+    margin: 0;
+}
+.personas{
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin: 1rem;
+    justify-content: center;
+    text-align: center;
+}
 /*ESCRITORIO */
 @media (min-width: 1025px) {
 
