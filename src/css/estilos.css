@@ -54,7 +54,8 @@ ul {
     list-style: none;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--fuente-titulos);
     font-weight: 400;
     margin-bottom: 1rem;
@@ -76,18 +77,23 @@ h1.h1 {
     text-transform: uppercase;
     color: var(--color-principal);
 }
+
 h2.subtitulo {
     color: rgba(20, 19, 19, 0.795);
 }
+
 .SeccionAlimentacion .General {
     color: var(--colorAlimentos);
 }
+
 .SeccionSaludProteccion .General {
     color: var(--colorSalud);
 }
+
 .AmbienteYAnimales .General {
     color: var(--colorAnimales);
 }
+
 .Educacion .General {
     color: var(--colorEducacion);
 }
@@ -164,7 +170,7 @@ header.container {
     display: flex;
     gap: 2rem;
     align-items: center;
-    
+
 }
 
 .a1 {
@@ -189,7 +195,7 @@ ul li:last-child a {
 }
 
 .navbar__botones {
-    background-color: rgba(220,238,170,0.6);
+    background-color: rgba(220, 238, 170, 0.6);
     margin: 1rem 0;
     border-radius: 8px;
 }
@@ -258,13 +264,16 @@ section {
 .SeccionAlimentacion .alimentacion__info {
     background-color: var(--color-tarjetaAlimentos1);
 }
+
 .SeccionSaludProteccion .info,
 .SeccionSaludProteccion .SP__info {
     background-color: var(--color-tarjetaSP1);
 }
+
 .AmbienteYAnimales .Animales__info {
     background-color: var(--color-tajetaAnimales);
 }
+
 .Educacion .Educacion__info {
     background-color: var(--color-tarjetaEducacion);
 }
@@ -307,6 +316,7 @@ section {
 .Todas_Fundaciones .FUNDACIONES div:first-child {
     order: 2;
 }
+
 .Todas_Fundaciones .FUNDACIONES div:last-child {
     order: 1;
     max-width: 400px;
@@ -414,19 +424,71 @@ section {
     border-radius: 10px;
 }
 
-.footer-redes {
+.footer {
     background-color: var(--color-texto);
-    padding: 3rem 1rem;
+    padding: 3rem 1rem 1.5rem 1rem;
     margin-top: 3rem;
+    color: var(--color-blanco);
 }
 
-.redes-footer {
+.footer-contactos {
+    text-align: center;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.footer-contactos .subtitulo {
+    color: var(--color-secundario);
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+}
+
+.personas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.personas>div {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.personas h3 {
+    font-family: var(--fuente-texto);
+    font-size: 1.6rem;
+    color: var(--color-blanco);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.personas p {
+    font-size: 1.5rem;
+    color: var(--color-principal);
+    font-weight: 500;
+}
+
+.footer-redes {
+    text-align: center;
+}
+
+.redes-titulo {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.redes-iconos {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
-.redes-footer a img {
+.redes-iconos a img {
     width: 30px;
     height: 30px;
     filter: invert(1);
@@ -434,8 +496,15 @@ section {
     transition: opacity 0.3s ease;
 }
 
-.redes-footer a:hover img {
+.redes-iconos a:hover img {
     opacity: 1;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    opacity: 0.7;
 }
 
 @media (min-width: 1025px) {
@@ -469,11 +538,12 @@ section {
         order: 1;
         flex-basis: 50%;
     }
+
     .Todas_Fundaciones .FUNDACIONES div:last-child {
         order: 2;
         flex-basis: 50%;
     }
-    
+
     .FormularioMapa {
         grid-template-columns: 1fr 1fr;
     }
@@ -483,16 +553,17 @@ section {
     .navbar__logo {
         max-height: 60px;
     }
-    
+
     h1.h1 {
         font-size: 2.8rem;
         text-align: center;
         width: 100%;
     }
+
     .navbar__container {
-        flex-direction: column; 
-        align-items: center;    
-        gap: 0.5rem;          
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     .ul1 {
@@ -509,8 +580,8 @@ section {
     }
 
     .li2 {
-        font-size: 1.6rem; 
-        padding: 0.5rem 1rem; 
+        font-size: 1.6rem;
+        padding: 0.5rem 1rem;
     }
 }
 
@@ -521,11 +592,11 @@ section {
         align-content: center;
         gap: 0.5rem;
     }
-    
+
     .navbar__container img {
         margin-right: 1rem;
     }
-    
+
     .navbar__container h1 {
         margin-right: auto;
     }
@@ -538,12 +609,16 @@ section {
     .li2 {
         font-size: 1.7rem;
     }
-    
+
     .alimentacion__info,
     .info,
     .SP__info,
     .Animales__info,
     .Educacion__info {
         flex-direction: row;
+    }
+
+    .personas {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
