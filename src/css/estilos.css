@@ -338,6 +338,20 @@ h1, .h1 {
     justify-content: center;
     text-align: center;
 }
+.FormularioMapa{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+.footer-redes{
+    display: flex;
+    margin: 0 2rem;
+    justify-content: space-between;
+}
+.img_redes{
+    width: 2rem;
+    height: 2rem;
+}
 /*ESCRITORIO */
 @media (min-width: 1025px) {
 
@@ -435,6 +449,12 @@ h1, .h1 {
         padding: 2rem;
         flex: 1;
         border-radius: 25px;
+    }
+
+    .alimentacion__info,.SP__info,.Animales__info,.Educacion__info,.info{
+        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
