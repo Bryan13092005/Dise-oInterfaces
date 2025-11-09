@@ -437,7 +437,7 @@ section {
 .redes-footer a:hover img {
     opacity: 1;
 }
-
+/*ESCRITORIO */
 @media (min-width: 1025px) {
     h1.h1 {
         font-size: 4rem;
@@ -476,6 +476,12 @@ section {
     
     .FormularioMapa {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .alimentacion__info,.SP__info,.Animales__info,.Educacion__info,.info{
+        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
