@@ -452,7 +452,7 @@ h1, .h1 {
     }
 
     .alimentacion__info,.SP__info,.Animales__info,.Educacion__info,.info{
-        gap: 1rem;
+        gap: 1rem; /* separacion*/
         display: flex;
         flex-wrap: wrap;
     }
