@@ -625,19 +625,6 @@ h1, .h1 {
 }
 
 
-/*TABLETS */
-@media (min-width: 1025px) {
-
-    /* Navbar */
-    .navbar__container {
-        width: 100%;
-        max-width: 1400px;
-        justify-content: space-between;
-        align-items: center;
-        padding: 40px 30px;
-        background-size: cover;
-        max-height: 150px;
-    }
 
 /* TABLETS */
 @media (min-width: 768px) and (max-width: 1024px) {
