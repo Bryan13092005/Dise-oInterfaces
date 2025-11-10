@@ -511,6 +511,16 @@ h1, .h1 {
         display: flex;
         flex-wrap: wrap;
     }
+  .FormularioMapa {
+    flex-direction: row; /* uno al lado del otro */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .Mapa iframe {
+    height: 400px;
+  }
 }
 
 
