@@ -6,12 +6,12 @@
     --color-fondo: #f5f9f9;
     --color-tarjetaAlimentos1: #FFF4E8;
     --color-tarjetaSP1: #EBF8FF;
-    --color-tajetaAnimales: #E8F8F5;
+    --color-tarjetaAnimales: #dbffe1;
     --color-tarjetaEducacion: #FEF2F2;
     --color-tarjeta2: #f0f7ff;
     --fuente-titulos: "Shrikhand", sans-serif;
     --fuente-texto: "Roboto", sans-serif;
-    --visiones: "Lobster", cursive;
+    --visiones: "Roboto", sans-serif;
     --colorAlimentos: #E67E22;
     --colorSalud: #3498DB;
     --colorAnimales: #27AE60;
@@ -83,7 +83,7 @@ h2.subtitulo {
 }
 
 .SeccionAlimentacion .General {
-    color: var(--colorAlimentos);
+    color: var(--colorSalud);
 }
 
 .SeccionSaludProteccion .General {
@@ -95,7 +95,7 @@ h2.subtitulo {
 }
 
 .Educacion .General {
-    color: var(--colorEducacion);
+    color: var(--colorAnimales);
 }
 
 
@@ -163,9 +163,9 @@ header.container {
 }
 
 .navbar__logo {
-    max-height: 60px;
-    background: var(--color-blanco);
-    border-radius: 8px;
+    max-height: 150px;
+    background: none;
+    border-radius: 0;
 }
 
 .ul1 {
@@ -263,21 +263,21 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.SeccionAlimentacion .alimentacion__info {
-    background-color: var(--color-tarjetaAlimentos1);
-}
 
-.SeccionSaludProteccion .info,
-.SeccionSaludProteccion .SP__info {
+
+.SeccionAlimentacion .alimentacion__info {
     background-color: var(--color-tarjetaSP1);
 }
 
+.SeccionSaludProteccion .info, 
+.SeccionSaludProteccion .SP__info { background-color: var(--color-tarjetaSP1); }
+
 .AmbienteYAnimales .Animales__info {
-    background-color: var(--color-tajetaAnimales);
+    background-color: var(--color-tarjetaAnimales);
 }
 
 .Educacion .Educacion__info {
-    background-color: var(--color-tarjetaEducacion);
+    background-color: var(--color-tarjetaAnimales);
 }
 
 
@@ -692,4 +692,5 @@ section {
     .img_Fundaciones {
         flex-basis: 250px;
     }
+
 }
